@@ -1,0 +1,47 @@
+@font-face {
+    src: url(../assets/fonts/Montserrat-Regular.otf);
+    font-family: ms;
+}
+
+@font-face {
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+    font-family: rbt;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--body-color);
+}
+
+
+* {
+    font-family: rbt;
+}
+
+a {
+    text-decoration: none;
+    color: yellow;
+}
+
+:root {
+    --body-color: #fff;
+    --color-0: #ffffff;
+    --color-1: #f1f1f1;
+    --color-2: #fcfcfc;
+   
+    --radius-0: 2px;
+    --radius-1: 5px;
+    --radius-2: 25px;
+    --radius-3: 100%;
+
+    --gap-0: 5px;
+    --gap-1: 10px;
+    --gap-2: 15px;
+}
+
+@media screen and (min-width: 420px) {
+    body {
+        display: none;
+    }
+}

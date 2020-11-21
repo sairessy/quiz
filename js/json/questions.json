@@ -1,0 +1,65 @@
+[
+    {
+        "question": "Que país venceu o mundial de futebol de 2010?",
+        "answer": "Espanha",
+        "options": ["Brazil", "Alemanha", "Espanha", "Uruguai", "Portugal"],
+        "type": ["cultura geral", "desporto"]
+    },
+
+    {
+        "question": "Qual dos seguintes cantores fez parte dos Bitles?",
+        "answer": "Paul McCartney",
+        "options": ["Kurt Cobain", "Paul McCartney", "Ringo Star", "Michael Jackson", "Roger Waters"],
+        "type": ["cultura geral" ,"música"]
+    },
+
+    {
+        "question": "Que jogador de futebol tem a alcunha de 'O bruxo'?",
+        "answer": "Ronaldinho Gaucho",
+        "options": ["Cristiano Ronaldo", "Ronaldinho Gaucho", "Pelé", "Lionel Messi", "Zidane"],
+        "type": ["cultura geral", "desporto"]
+    },
+
+    {
+        "question": "Qual das seguintes músicas é da autoria dos Pink Floyd?",
+        "answer": "vera",
+        "options": ["thriller", "vera", "smells Like teen spirit", "paradise", "radioactive"],
+        "type": ["cultura geral", "música"]
+    },
+
+    {
+        "question": "Qual das seguintes marcas apresenta uma maçã como o seu logótipo?",
+        "answer": "apple",
+        "options": ["raspberry pie", "windows", "apple", "Blackberry", "Samsung"],
+        "type": ["cultura geral", "tecnologia"]
+    },
+
+    {
+        "question": "Qual das seguintes linguagens de programação é de tipagem dinâmica?",
+        "answer": "javascript",
+        "options": ["Java", "C", "Javascript", "C++", "C#"],
+        "type": ["cultura geral", "tecnologia"]
+    },
+
+    {
+        "question": "Um icoxaedro é um polígono de quantos lados?",
+        "answer": "20",
+        "options": ["10", "20", "30", "40", "50"],
+        "type": ["cultura geral"]
+    },
+
+    {
+        "question": "Qual a selecção com mais títulos no mundial de futebol?",
+        "answer": "Brasil",
+        "options": ["Espanha", "França", "Alemanha", "Portugal", "Brasil"],
+        "type": ["cultura geral"]
+    },
+
+    {
+        "question": "Que cantor ficou conhecido como rei do Pop?",
+        "answer": "Michael Jackson",
+        "options": ["Bruno Mars", "Chirs Brown", "Michael Jackson", "Justin Bieber", "Usher"],
+        "type": ["cultura geral", "música"]
+    }
+
+]

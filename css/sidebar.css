@@ -1,0 +1,35 @@
+#sidebar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #00000005;
+    display: none;
+}
+
+#sidebar {
+    position: absolute;
+    width: 80%;
+    left: -80%;
+    height: 100vh;
+    background-color: var(--color-0);
+    border-right: 1px solid #ddd;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+    border-bottom: 1px solid #eee;
+}
+
+#sidebar ul li {
+    padding: var(--gap-0);
+    margin: var(--gap-0);
+}
+
+#sidebar ul li:active {
+    background-color: #311B92;
+    color: #fff;
+}
