@@ -60,6 +60,96 @@
         "answer": "Michael Jackson",
         "options": ["Bruno Mars", "Chirs Brown", "Michael Jackson", "Justin Bieber", "Usher"],
         "type": ["cultura geral", "música"]
-    }
+    },
 
+    {
+        "question": "Qual é o verdadeiro nome do super-heroi da DC 'Batman'?",
+        "answer": "Bruce Wayne",
+        "options": ["Scott Adkins", "Bruce Wayne", "Barry Allen", "Lex Luthor", "Clark"],
+        "type": ["cultura geral", "cinema"]
+    },
+
+    {
+        "question": "Que actor interpretou o personagem Jack no filme de 1997 'Titanic'?",
+        "answer": "Leonardo DiCaprio",
+        "options": ["Leonardo DiCaprio", "Brad Pitt", "Dwayne Johnson", "Vin Diesel", "Scott Adkins"],
+        "type": ["cultura geral", "cinema"]
+    },
+
+    {
+        "question": "Qual é o planeta mais quente do sistema solar?",
+        "answer": "Venus",
+        "options": ["Terra", "Venus", "Marte", "Mercúrio", "Júpter"],
+        "type": ["cultura geral", "cinema"]
+    },
+
+    {
+        "question": "Qual é o significado da autobiografia de Hitler Mein Kampf, em português?",
+        "answer": "Minha luta",
+        "options": ["Minha loucura", "Minha luta", "Meu ódio", "Meu desejo", "Meu país"],
+        "type": ["cultura geral", "cinema"]
+    },
+
+    {
+        "question": "Qual das seguintes selecções se qualificou para o mundial de 2018 na Rússia?",
+        "answer": "Tunísia",
+        "options": ["Estados Unidos da América","Itália","Holdanda", "Tunísia", "Angola"],
+        "type": ["cultura geral", "desporto"]
+    },    
+
+    {
+        "question": "Qual é a cor da barba negra feminina?",
+        "answer": "castanha",
+        "options": ["preta","castanha","branca", "amarela", "cinza"],
+        "type": ["cultura geral"]
+    },
+
+    {
+        "question": "Qual foi o único presidente americano a ser eleito quatro vezes?",
+        "answer": "Franklin Roosevelt",
+        "options": ["Theodore Roosevelt","George Washington","Abraham Lincoln", "Franklin Roosevelt", "Barack Obama"],
+        "type": ["cultura geral", "desporto"]
+    },    
+
+    {
+        "question": "Quantos albums de estudo lançaram os Duo Daft Punk?",
+        "answer": "4",
+        "options": ["5","4", "6","2", "1"],
+        "type": ["cultura geral", "música"]
+    },
+
+    {
+        "question": "Em que região dos estados unidos é permitido o consumo de alcool enquanto se dirrige uma viatura?",
+        "answer": "Mississipi",
+        "options": ["Texas","Las vegas", "Nova Jersey","Mississipi", "Nova York"],
+        "type": ["cultura geral", "música"]
+    },
+
+    {
+        "question": "Automóveis produzidos pela Tesla Motors operam com que forma de energia?",
+        "answer": "eléctrica",
+        "options": ["eléctrica","Solar", "Diesel","Nuclear", "Eólica"],
+        "type": ["cultura geral", "música"]
+    },
+
+    {
+        "question": "Quem foi o 45º presidente dos Estados Unidos da América?",
+        "answer": "Donald Trump",
+        "options": ["Barack Obama", "Donald Trump", "Bill Clinton", "George Bush", "Henry Thruman"],
+        "type": ["cultura geral"]
+    },
+
+    {
+        "question": "Qual dos seguintes paises tem menor população?",
+        "answer": "Noruega",
+        "options": ["Slovakia","Finland","Hong Kong", "Noruega", "Moçambique"],
+        "type": ["cultura geral"]
+    },
+
+    {
+        "question": "Em que ano teve início a primeira guerra mundial?",
+        "answer": "1914",
+        "options": ["1918","1914","1941", "1845", "1923"],
+        "type": ["cultura geral", "história"]
+    }        
 ]

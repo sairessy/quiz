@@ -16,6 +16,8 @@ body {
 
 
 * {
+
+    box-sizing: border-box;
     font-family: rbt;
 }
 
@@ -42,6 +44,7 @@ a {
 
 @media screen and (min-width: 420px) {
     body {
-        display: none;
+        width: 414px;
+        margin: auto;
     }
 }

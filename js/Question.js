@@ -1,7 +1,8 @@
 class Question {
-    constructor() {
+    constructor(player) {
         this.questions = this.getAll();
         this.passed = [];
+        this.player = player;
     }
 
     getAll() {
@@ -38,6 +39,9 @@ class Question {
 
         if(qs.length > 0) {
             this.questions = qs;
+            this.player.points = 0;
+            this.passed = [];
+            $('.slider').animate({'width': '0'});  
             this.put();
         }
     }
@@ -52,13 +56,26 @@ class Question {
 
         this.passed.push(this.q);
 
-        console.log(this.passed);
+        // console.log(this.passed);
        
         $('#questions-answers p').text(this.questions[this.q].question);
 
-        for (let i = 0; i < 5; i++) {
-            $(`#buttons #btn-${i}`).text(this.questions[this.q].options[i]);
-        }   
+        const qs = [];
+
+        while(qs.length < 5) {
+            const j = Math.round(Math.random()*4);
+            if(!qs.includes(j)) {
+                qs.push(j);
+                // console.log(qs);
+            }    
+        }
+ 
+        $('#buttons').html('');
+
+        qs.forEach(e=> {
+            $('#buttons').append(`<button id="btn-${e}"></button>`);
+            $(`#buttons #btn-${e}`).text(this.questions[this.q].options[e]);
+        });
     }
 
     checkAnswer(answer) {
@@ -66,10 +83,11 @@ class Question {
             for (let i = 0; i < 5; i++) {
                 const txt = $(`#buttons #btn-${i}`).text().toLowerCase();
                 if(txt == this.questions[this.q].answer.toLowerCase()) {
-                    $(`#buttons #btn-${i}`).css({'background-color': '#2bccb1'});
+                    $(`#buttons #btn-${i}`).css({'background-color': '#2bccb1', 'color': '#fff'});
                   
                     setTimeout(() => {
-                        $('#buttons button').css({'background-color': '#fff'});
+                        $('#buttons button').css({'background-color': '#311B92', 'color': '#fff'});
+                        $('#buttons button').attr("disabled", false);
                         this.put();
                     }, 500); 
                   
@@ -81,7 +99,7 @@ class Question {
             for (let i = 0; i < 5; i++) {
                 const txt = $(`#buttons #btn-${i}`).text().toLowerCase();
                 if(txt == this.questions[this.q].answer.toLowerCase()) {
-                    $(`#buttons #btn-${i}`).css({'background-color': '#2bccb1'});
+                    $(`#buttons #btn-${i}`).css({'background-color': '#2bccb1', 'color': '#fff'});
                     break;
                 } 
             }
@@ -89,9 +107,10 @@ class Question {
             for (let i = 0; i < 5; i++) {
                 const txt = $(`#buttons #btn-${i}`).text().toLowerCase();
                 if(txt == answer) {
-                    $(`#buttons #btn-${i}`).css({'background-color': '#FF5252'});
+                    $(`#buttons #btn-${i}`).css({'background-color': '#FF5252', 'color': '#fff'});
                     setTimeout(() => {
-                        $('#buttons button').css({'background-color': '#fff'});
+                        $('#buttons button').css({'background-color': '#311B92', 'color': '#fff'});
+                        $('#buttons button').attr("disabled", false);
                         this.put();
                     }, 2000);
 

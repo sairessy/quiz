@@ -1,12 +1,4 @@
 $(document).ready(()=> {
-    $('#cogs #close').click(()=> {
-        $('#cogs').animate({'left': '-100%'});
-    }); 
-
-    $('#cog').click(()=> {
-        $('#cogs').animate({'left': '0'});
-    }); 
-
     $('#bar').click(()=> {
         $('#sidebar-container').show();
         $('#sidebar').animate({'left': '0'}, 300);
@@ -21,20 +13,18 @@ $(document).ready(()=> {
         }
     });
 
-    
+
+    const player = new Player();
 
     
-    let points = 0;
-
     // App init
-    let question = new Question();
+    let question = new Question(player);
 
     question.put();
 
     $('#sidebar ul li').click((e)=> {
         question.passed = [];
-        points = 0;
-        $("#points").text(points);
+        question.player.points = 0;
         const cat = e.currentTarget.innerText;
         question.getCategory(cat);
 
@@ -44,27 +34,49 @@ $(document).ready(()=> {
         }, 350);
     });
 
-    $('#buttons button').click((e)=> {
-        if(question.passed.length >= question.questions.length) {
-            alert('Esta era a última questão, você venceu parabéns!');
+    $(document).on('click', '#buttons button', (e)=> {
+        $('#buttons button').attr("disabled", true);
+        if(question.passed.length == question.questions.length) {
+            // alert('Esta era a última questão, você venceu parabéns!');
+            const answer = e.currentTarget.innerText.toLowerCase();
+            const success = question.checkAnswer(answer);
             question.passed = [];
-            points = 0;
-            $("#points").text(points);
-            question.put();
+            question.player.points = 0;
+
+            
+            if(success) {
+                alert('Esta era a última questão, você venceu!');
+            } else {
+                alert('Oooh, errou a última questão!');
+            }
+
         } else {
             const answer = e.currentTarget.innerText.toLowerCase();
             const success = question.checkAnswer(answer);
             if(success) {
-                points++;
-                $("#points").text(points);
+                question.player.points++;
             } else {
-                points = 0;
-                $("#points").text(points);
+                question.player.points = 0;
             }
         }
+
+        const w = (100/question.questions.length)*question.player.points;
+
+        $('.slider').css({'background-color': '#444'}); 
+        
+        if(w >= 50) {
+            $('.slider').css({'background-color': 'yellow'}); 
+        }
+
+        if(w >= 70) {
+            $('.slider').css({'background-color': 'greenyellow'}); 
+        }
+
+        if(w >= 90) {
+            $('.slider').css({'background-color': 'green'}); 
+        }
+
+        $('.slider').animate({'width': `${w}%`});       
     });
-
-
-
 
 });

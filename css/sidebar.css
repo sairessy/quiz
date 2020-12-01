@@ -17,6 +17,10 @@
     border-right: 1px solid #ddd;
 }
 
+#sidebar .header {
+    border-bottom: 1px solid #ddd;
+}
+
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -32,4 +36,23 @@
 #sidebar ul li:active {
     background-color: #311B92;
     color: #fff;
+}
+
+#sidebar #social {
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar #social a {
+    font-size: 32px;
+    margin: 5px 20px;
+    color: #444;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-1);
 }
