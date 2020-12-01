@@ -13,9 +13,29 @@ $(document).ready(()=> {
         }
     });
 
+    // Sounds
+    let vol = 0.02;
 
-    const player = new Player();
+    const sounds = {
+        correct: new Audio('../assets/sound/correct.mp3'),
+        wrong: new Audio('../assets/sound/wrong.mp3'),
+        winner: new Audio('../assets/sound/winner.mp3')
+    } 
 
+    sounds.correct.volume = vol;
+    sounds.wrong.volume = vol;
+    sounds.winner.volume = vol;
+
+    $("#volume input").on('change', ()=> {
+        vol = ($("#volume input").val()*0.01).toFixed(2);
+        sounds.correct.volume = vol;
+        sounds.wrong.volume = vol;
+        sounds.winner.volume = vol;
+    });
+
+
+
+    const player = new Player();    
     
     // App init
     let question = new Question(player);
@@ -45,9 +65,7 @@ $(document).ready(()=> {
 
             
             if(success) {
-                alert('Esta era a última questão, você venceu!');
-            } else {
-                alert('Oooh, errou a última questão!');
+                sounds.winner.play();
             }
 
         } else {
@@ -55,8 +73,10 @@ $(document).ready(()=> {
             const success = question.checkAnswer(answer);
             if(success) {
                 question.player.points++;
+                sounds.correct.play();
             } else {
                 question.player.points = 0;
+                sounds.wrong.play();
             }
         }
 
